@@ -89,7 +89,7 @@ module Configit
 
       # Load the config from a file.
       def load_from_file(filename)
-        raise ArgumentError, "File #{filename} does not exist"  unless File.exists?(filename)
+        raise ArgumentError, "File #{filename} does not exist"  unless File.exist?(filename)
         raise ArgumentError, "File #{filename} is not readable" unless File.readable?(filename)
 
         return load_from_string(IO.read(filename))
